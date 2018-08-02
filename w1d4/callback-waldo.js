@@ -1,19 +1,13 @@
 function findWaldo(arr, found) {
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === "Waldo") {
-      found(i);   // execute callback
-      // waldoIndex() = [i] + 1;
+  arr.forEach(function(name, index) {
+    if (name === "Waldo") {
+      found(index);
+  //for (var i = 0; i < arr.length; i++) {
+    //if (arr[i] === "Waldo") {
+      //found(i);   // execute callback
     }
-  }
+  });
 }
-
-// function findWaldoIndex(arr, index){
-//   for (var i = 0; i < arr.length; i++) {
-//     if (arr[i] === 'Waldo') {
-//       waldoIndex() = [i] + 1;
-//     }
-//   }
-// }
 
 function actionWhenFound(i) {
   console.log("Found Waldo at index ", i,"!");
